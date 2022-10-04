@@ -1,0 +1,26 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "es2015",
+		"module": "esnext",
+		"lib": ["es2017", "dom", "ES2019"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@tsdoc-tagged-reporter/jest": ["packages/jest/src/index.ts"],
+			"@tsdoc-tagged-test/core": ["packages/core/src/index.ts"],
+			"@tsdoc-tagged-test/jest-reporter": [
+				"packages/jest-reporter/src/index.ts"
+			]
+		}
+	},
+	"exclude": ["node_modules", "tmp"]
+}

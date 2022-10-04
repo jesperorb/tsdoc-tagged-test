@@ -1,0 +1,33 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "packages/jest-reporter/src",
+	"projectType": "library",
+	"targets": {
+		"build": {
+			"executor": "@nrwl/js:tsc",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"outputPath": "dist/packages/jest-reporter",
+				"main": "packages/jest-reporter/src/index.ts",
+				"tsConfig": "packages/jest-reporter/tsconfig.lib.json",
+				"assets": ["packages/jest-reporter/*.md"]
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["packages/jest-reporter/**/*.ts"]
+			}
+		},
+		"test": {
+			"executor": "@nrwl/jest:jest",
+			"outputs": ["coverage/packages/jest-reporter"],
+			"options": {
+				"jestConfig": "packages/jest-reporter/jest.config.ts",
+				"passWithNoTests": true
+			}
+		}
+	},
+	"tags": ["jest"]
+}

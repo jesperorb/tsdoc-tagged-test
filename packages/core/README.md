@@ -1,0 +1,1 @@
+# @tsdoc-tagged-test/core
