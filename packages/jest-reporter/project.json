@@ -4,13 +4,18 @@
 	"projectType": "library",
 	"targets": {
 		"build": {
-			"executor": "@nrwl/js:tsc",
+			"executor": "@nrwl/rollup:rollup",
 			"outputs": ["{options.outputPath}"],
 			"options": {
+				"project": "packages/jest-reporter/package.json",
+				"format": [
+					"esm",
+					"cjs"
+				],
 				"outputPath": "dist/packages/jest-reporter",
 				"main": "packages/jest-reporter/src/index.ts",
 				"tsConfig": "packages/jest-reporter/tsconfig.lib.json",
-				"assets": ["packages/jest-reporter/*.md"]
+				"assets": []
 			}
 		},
 		"lint": {

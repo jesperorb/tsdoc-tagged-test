@@ -2,7 +2,7 @@ import { TestDataFactory } from './types';
 
 import { TestBlockDocComment } from '../../types';
 
-import { testBlockTagFactory } from '.';
+import { testBlockTagFactory } from './test-doc-block-tag';
 
 export const testDocBlockCommentFactory: TestDataFactory<
 	TestBlockDocComment

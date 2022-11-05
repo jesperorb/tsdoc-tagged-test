@@ -1,3 +1,4 @@
+import type { TestBlockDocComment } from '@tsdoc-tagged-test/core';
 import type { TestGroup, TestGrouperConfig } from '../types';
 import {
 	failed,
@@ -17,7 +18,8 @@ export const groupTests = <CustomTag extends string>({
 			const topLevelAncestortitle = assertion.ancestorTitles[0];
 			const topLevelAncestorBlockTagComment =
 				assertion.ancestorTestBlockComments?.find(
-					(testBlockComment) => testBlockComment.title === topLevelAncestortitle
+					(testBlockComment: TestBlockDocComment<CustomTag>) =>
+						testBlockComment.title === topLevelAncestortitle
 				);
 			const groupTag = topLevelAncestorBlockTagComment?.testBlockTags
 				? topLevelAncestorBlockTagComment.testBlockTags[schema.tagName]

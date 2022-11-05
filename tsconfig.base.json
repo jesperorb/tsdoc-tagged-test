@@ -15,11 +15,10 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
-			"@tsdoc-tagged-reporter/jest": ["packages/jest/src/index.ts"],
 			"@tsdoc-tagged-test/core": ["packages/core/src/index.ts"],
 			"@tsdoc-tagged-test/jest-reporter": [
 				"packages/jest-reporter/src/index.ts"
-			]
+			],
 		}
 	},
 	"exclude": ["node_modules", "tmp"]
