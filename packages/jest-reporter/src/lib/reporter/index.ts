@@ -24,7 +24,7 @@ import type {
 import { getCompilerOptions, writeToFile } from '../utils/io';
 import { getSourceFileHelper } from '../utils/typescript-helpers';
 
-export default class TsDocTaggedTestReporter<CustomTag extends string>
+export class TsDocTaggedTestReporter<CustomTag extends string>
 	implements Pick<Reporter, 'onRunComplete'>
 {
 	private readonly applyTags: (BlockTagNames | CustomTag)[];
