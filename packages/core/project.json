@@ -4,19 +4,13 @@
 	"projectType": "library",
 	"targets": {
 		"build": {
-			"executor": "@nrwl/rollup:rollup",
+			"executor": "@nrwl/js:tsc",
 			"outputs": ["{options.outputPath}"],
 			"options": {
-				"generateExportsField": true,
-				"project": "packages/core/package.json",
-				"format": [
-					"esm",
-					"cjs"
-				],
 				"outputPath": "dist/packages/core",
 				"main": "packages/core/src/index.ts",
 				"tsConfig": "packages/core/tsconfig.lib.json",
-				"assets": []
+				"assets": ["packages/core/*.md"]
 			}
 		},
 		"lint": {

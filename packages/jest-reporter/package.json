@@ -1,6 +1,6 @@
 {
 	"name": "@tsdoc-tagged-test/jest-reporter",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"peerDependencies": {
 		"typescript": "^4.5.0"
 	},
@@ -8,7 +8,7 @@
 		"@jest/reporters": "^29.0.3",
 		"@jest/test-result": "^29.0.3",
 		"@microsoft/tsdoc": "^0.14.2",
-		"@tsdoc-tagged-test/core": "workspace:^0.0.2",
+		"@tsdoc-tagged-test/core": "workspace:^0.0.3",
 		"handlebars": "^4.7.7"
 	}
 }
